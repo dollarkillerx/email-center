@@ -10,9 +10,9 @@ email: # email 集合
     host: "smtp.mail.ru"
     port: 465
   - user: "a@a.com"
-      password: "password"
-      host: "smtp.mail.ru"
-      port: 465
+    password: "password"
+    host: "smtp.mail.ru"
+    port: 465
 ```
 
 ### Api
