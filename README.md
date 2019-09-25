@@ -5,18 +5,44 @@ email center  接入多个email邮箱 防止发送邮件被封  tk可注册免�
 初始使用填写配置文件
 ``` 
 email: # email 集合
-  - user: "notice@dollarkiller.com"
-    password: "%Y4I4qjlqKAy"
+  - user: "b@a.com"
+    password: "password"
     host: "smtp.mail.ru"
     port: 465
+  - user: "a@a.com"
+      password: "password"
+      host: "smtp.mail.ru"
+      port: 465
 ```
 
 ### Api
 post: http://127.0.0.1/email/seed
 
-value:
+参数:
 ``` 
 email string  // 发送目标 (单个邮件: a@a.com)(多个邮件: a@a.com,b@b.com,c@c.com)
 head  string  // 发送头
 body  string  // 发送体 
+```
+200 正确返回:
+``` 
+map[string]interface{}{
+    "code":200,
+    "msg":"发送成功",
+}
+```
+400 参数错误:
+``` 
+map[string]interface{}{
+    "code":400,
+    "msg":"参数错误",
+}
+```
+500 发送失败:
+``` 
+map[string]interface{}{
+    "code":500,
+    "msg":"发送失败",
+    "data":err.Error(),
+}
 ```

@@ -75,8 +75,8 @@ app:
   max_request: 1000 # 最大并发数量
 
 email: # email 集合
-  - user:
-    password:
+  - user: "user"
+    password: "password"
     host: "smtp.mail.ru"
     port: 465
 `

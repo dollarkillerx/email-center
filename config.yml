@@ -6,8 +6,8 @@ app:
   max_request: 1000 # 最大并发数量
 
 email: # email 集合
-  - user: "notice@dollarkiller.com"
-    password: "%Y4I4qjlqKAy"
+  - user: "a@a.com"
+    password: "password"
     host: "smtp.mail.ru"
     port: 465
 
