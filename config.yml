@@ -4,12 +4,46 @@ app:
   host: "0.0.0.0:8083"
   debug: true
   max_request: 1000 # 最大并发数量
-  key: "" # 秘钥
+  key: "123456" # 秘钥
 
 email: # email 集合
-  - user: "a@a.com"
-    password: "password"
+  - user: "notice1@emailser1.tk"
+    password: "h4=QHeHI0efm"
     host: "smtp.mail.ru"
     port: 465
-
-
+  - user: "notice2@emailser1.tk"
+    password: "GVw34Wd"
+    host: "smtp.mail.ru"
+    port: 465
+  - user: "notice3@emailser1.tk"
+    password: "M22N92P"
+    host: "smtp.mail.ru"
+    port: 465
+  - user: "notice4@emailser1.tk"
+    password: "h4=QHeHI0efm"
+    host: "smtp.mail.ru"
+    port: 465
+  - user: "notice5@emailser1.tk"
+    password: "h4=QHeHI0efm"
+    host: "smtp.mail.ru"
+    port: 465
+  - user: "notice6@emailser1.tk"
+    password: "h4=QHeHI0efm"
+    host: "smtp.mail.ru"
+    port: 465
+  - user: "notice7@emailser1.tk"
+    password: "h4=QHeHI0efm"
+    host: "smtp.mail.ru"
+    port: 465
+  - user: "notice8@emailser1.tk"
+    password: "h4=QHeHI0efm"
+    host: "smtp.mail.ru"
+    port: 465
+  - user: "notice9@emailser1.tk"
+    password: "h4=QHeHI0efm"
+    host: "smtp.mail.ru"
+    port: 465
+  - user: "notice10@emailser1.tk"
+    password: "h4=QHeHI0efm"
+    host: "smtp.mail.ru"
+    port: 465

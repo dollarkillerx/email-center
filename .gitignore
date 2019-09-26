@@ -12,3 +12,4 @@
 *.out
 .idea
 email-center
+config.yml

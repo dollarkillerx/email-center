@@ -45,8 +45,8 @@ func getEmail() *config.Email {
 	le := len(config.MyConfig.Email) - 1
 	i := 0
 	mu.Lock()
-	if num <= le {
-		i = le
+	if num < le {
+		i = num
 		num += 1
 	} else {
 		num = 0
