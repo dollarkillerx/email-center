@@ -23,9 +23,8 @@ func RegisterIris() *iris.Application {
 }
 
 func router(app *iris.Application) {
-	app.Post("/email/seed",Logic)
+	app.Post("/email/seed", Logic)
 }
-
 
 // 逻辑
 func Logic(ctx iris.Context) {
@@ -35,8 +34,8 @@ func Logic(ctx iris.Context) {
 	if err != nil {
 		ctx.StatusCode(400)
 		ctx.JSON(map[string]interface{}{
-			"code":400,
-			"msg":"参数错误",
+			"code": 400,
+			"msg":  "参数错误",
 		})
 		return
 	}
@@ -45,8 +44,8 @@ func Logic(ctx iris.Context) {
 	if input.Key != config.MyConfig.App.Key {
 		ctx.StatusCode(401)
 		ctx.JSON(map[string]interface{}{
-			"code":401,
-			"msg":"权限错误",
+			"code": 401,
+			"msg":  "权限错误",
 		})
 		return
 	}
@@ -56,15 +55,15 @@ func Logic(ctx iris.Context) {
 		clog.PrintWa(err)
 		ctx.StatusCode(500)
 		ctx.JSON(map[string]interface{}{
-			"code":500,
-			"msg":"发送失败",
-			"data":err.Error(),
+			"code": 500,
+			"msg":  "发送失败",
+			"data": err.Error(),
 		})
 		return
 	}
 	ctx.StatusCode(200)
 	ctx.JSON(map[string]interface{}{
-		"code":200,
-		"msg":"发送成功",
+		"code": 200,
+		"msg":  "发送成功",
 	})
 }
