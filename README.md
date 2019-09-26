@@ -22,7 +22,8 @@ post: http://127.0.0.1/email/seed
 ``` 
 email string  // 发送目标 (单个邮件: a@a.com)(多个邮件: a@a.com,b@b.com,c@c.com)
 head  string  // 发送头
-body  string  // 发送体 
+body  string  // 发送体
+key   string  // 秘钥 每次都要携带 
 ```
 200 正确返回:
 ``` 
@@ -36,6 +37,13 @@ map[string]interface{}{
 map[string]interface{}{
     "code":400,
     "msg":"参数错误",
+}
+```
+401 权限错误:
+``` 
+map[string]interface{}{
+    "code":401,
+    "msg":"权限错误",
 }
 ```
 500 发送失败:

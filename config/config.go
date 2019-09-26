@@ -20,6 +20,7 @@ type myconf struct {
 		Host       string `yaml:"host"`
 		Debug      bool   `yaml:"debug"`
 		MaxRequest int    `yaml:"max_request"`
+		Key        string `yaml:"key"`
 	} `yaml:"app"`
 	Email []Email `yaml:"email"`
 }
@@ -73,6 +74,8 @@ app:
   host: "0.0.0.0:8083"
   debug: true
   max_request: 1000 # 最大并发数量
+  key: "" # 秘钥
+  
 
 email: # email 集合
   - user: "user"

@@ -7,6 +7,7 @@
 package controller
 
 import (
+	"email-center/config"
 	"email-center/defs"
 	"email-center/logic"
 	"github.com/dollarkillerx/easyutils/clog"
@@ -36,6 +37,16 @@ func Logic(ctx iris.Context) {
 		ctx.JSON(map[string]interface{}{
 			"code":400,
 			"msg":"参数错误",
+		})
+		return
+	}
+
+	// auth
+	if input.Key != config.MyConfig.App.Key {
+		ctx.StatusCode(401)
+		ctx.JSON(map[string]interface{}{
+			"code":401,
+			"msg":"权限错误",
 		})
 		return
 	}

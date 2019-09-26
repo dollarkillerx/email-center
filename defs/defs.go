@@ -7,7 +7,8 @@
 package defs
 
 type SeedEmail struct {
-	Email string `json:"email"` // 输入参考 a@a.com,b@b.com,v@c.com
-	Head  string   `json:"head"`
-	Body  string   `json:"body"`
+	Email string `json:"email" form:"email"` // 输入参考 a@a.com,b@b.com,v@c.com
+	Head  string `json:"head" form:"head"`
+	Body  string `json:"body" form:"body"`
+	Key   string `json:"key" form:"key"`
 }
